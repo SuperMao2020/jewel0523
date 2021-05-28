@@ -30,6 +30,9 @@
     <ClInclude Include="StartScene.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ClassicScene.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="PatternScene.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassicScene.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

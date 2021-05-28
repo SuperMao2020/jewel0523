@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ClassicScene.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="PatternScene.h" />
     <ClInclude Include="ResLoader.h" />
@@ -146,6 +147,7 @@
     <ClInclude Include="StartScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ClassicScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PatternScene.cpp" />
     <ClCompile Include="ResLoader.cpp" />

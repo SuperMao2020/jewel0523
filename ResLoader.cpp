@@ -1,3 +1,4 @@
+#pragma once
 #include "ResLoader.h"
 #include "resource.h"
 
@@ -17,11 +18,11 @@ void ResLoader::init()
 	Image::preload(L"res\\StartGame.png");
 	Image* startGame = new Image(L"res\\StartGame.png");
 	//4. 模式选择界面图片
-	Image::preload(IDB_PNG2, L"PNG");
-	Image* patternScene = new Image(IDB_PNG2, L"PNG");
-	//5.停止播放音乐按钮正常状态
-	Image::preload(L"res\\StopMusic.png");
-	Image* stopMusic = new Image(L"res\\StopMusic.png");
+	Image::preload(L"res\\PatternScene.png");
+	Image* patternScene = new Image(L"res\\PatternScene.png");
+	////5.停止播放音乐按钮正常状态
+	//Image::preload(L"res\\soundoff.png");
+	//Image* stopMusic = new Image(L"res\\soundoff.png");
 	//6.加载背景音乐
 	// 循环播放背景音乐，-1 表示循环播放
 	MusicPlayer::preload(L"res\\background.wav");
@@ -29,14 +30,19 @@ void ResLoader::init()
 	//7.返回上一个界面按钮
 	Image::preload(L"res\\ReturnScene.png");
 	Image* returnScene = new Image(L"res\\ReturnScene.png");
+	//8. 经典模式背景
+	Image::preload(L"res\\BG03.png");
+	Image* classicScene = new Image(L"res\\BG03.png");
 
 	// 保存到映射
 	imageMap.insert(std::make_pair(L"StartScene", startScene));
 	imageMap.insert(std::make_pair(L"MainTopic", mainTopic));
 	imageMap.insert(std::make_pair(L"StartGame", startGame));
 	imageMap.insert(std::make_pair(L"Pattern", patternScene));
-	imageMap.insert(std::make_pair(L"StopMusic", stopMusic));
+	/*imageMap.insert(std::make_pair(L"StopMusic", stopMusic));*/
 	imageMap.insert(std::make_pair(L"ReturnScene", returnScene));
+	imageMap.insert(std::make_pair(L"ClassicScene", classicScene));
+
 }
 
 Image* ResLoader::getImage(String imageName)

@@ -1,6 +1,8 @@
+#pragma once
 #include "PatternScene.h"
 #include "ResLoader.h"
 #include "resource.h"
+#include "ClassicScene.h"
 
 PatternScene::PatternScene()
 {
@@ -27,7 +29,7 @@ PatternScene::PatternScene()
 	returnMain_btn->setOpacity(0.0f);
 	auto sequence_2 = gcnew Sequence({ delay->clone(), sequence->clone() });
 	returnMain_btn->runAction(sequence_2->clone());
-	// 按下开始按钮，进入 主菜单 场景
+	// 按下返回按钮，进入 主菜单 场景
 	returnMain_btn->setClickFunc([]
 		{
 			SceneManager::back();
@@ -35,6 +37,19 @@ PatternScene::PatternScene()
 
 	returnMain_btn->setPos(Window::getWidth() - 50, Window::getHeight() - 50);
 	this->addChild(returnMain_btn);
-	
+
+	//添加进入经典模式按钮
+	auto start = gcnew Sprite(ResLoader::getImage(L"StartGame"));
+	auto start_btn = gcnew Button(start);
+	//start_btn->setOpacity(0.0f);
+	//auto sequence_2 = gcnew Sequence({ delay->clone(), sequence->clone() });
+	//start_btn->runAction(sequence_2->clone());
+	// 按下开始按钮，进入 Game 场景
+	start_btn->setClickFunc([]
+		{
+			SceneManager::enter(gcnew ClassicScene(), gcnew FadeTransition(0.6f));
+		});
+	start_btn->setPos(Window::getWidth() / 2-100, Window::getHeight() / 2 -100);
+	this->addChild(start_btn);
 	
 }

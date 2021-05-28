@@ -13,5 +13,7 @@ protected:
 	Button* soundBtn;
 	// ¼ÌĞøÓÎÏ·°´Å¥
 	Button* resumeBtn;
+
+	bool g_SoundOpen = true;
 };
 

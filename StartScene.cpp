@@ -1,8 +1,8 @@
+#pragma once
 #include "StartScene.h"
 #include "ResLoader.h"
 #include "PatternScene.h"
 
-bool g_SoundOpen = true;
 
 StartScene::StartScene()
 {

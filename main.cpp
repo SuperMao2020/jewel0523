@@ -1,3 +1,4 @@
+#pragma once
 #include "resource.h"
 #include "ResLoader.h"
 #include "StartScene.h"
